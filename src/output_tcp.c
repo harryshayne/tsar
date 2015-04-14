@@ -30,11 +30,6 @@ send_tcp(int fd, int have_collect)
     int    out_pipe[2];
     int    len;
 
-    /* get st_array */
-    if (get_st_array_from_file(have_collect)) {
-        return;
-    }
-
     /* only output from output_db_mod */
     reload_modules(conf.output_tcp_mod);
 
